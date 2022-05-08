@@ -1,0 +1,19 @@
+{
+  "name": "prometheus-client",
+  "packageManager": "yarn@3.2.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "update:yarn": "yarn set version stable",
+    "build": "yarn workspaces foreach run build",
+    "start:server": "yarn workspace server start",
+    "start:ui": "yarn workspace ui start",
+    "test": "yarn workspaces foreach run test",
+    "dev": "concurrently \"yarn start:server\" \"yarn start:ui\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}

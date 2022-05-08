@@ -1,0 +1,9 @@
+{
+  "name": "prometheus",
+  "scripts": {
+    "build": "docker build -t prometheus .",
+    "start": "docker run -p 9090:9090 prometheus",
+    "lint": "",
+    "test": ""
+  }
+}
